@@ -29,7 +29,7 @@ Each output line is a JSON object with the following fields:
 ## Usage
 
 ```bash
-./extract.sh <input_dir> <output_file>
+./extraction-parallel.sh <input_dir> <output_file>
 ```
 
 ### Arguments
@@ -43,13 +43,13 @@ Each output line is a JSON object with the following fields:
 
 ```bash
 # Basic usage
-./extract.sh /data/2025-06-01/calls output.jsonl
+./extraction-parallel.sh /data/2025-06-01/calls output.jsonl
 
 # Using defaults (processes current directory, writes to output.jsonl)
-./extract.sh
+./extraction-parallel.sh
 
 # Explicit paths
-./extract.sh /mnt/calldata/2025-06-01 /mnt/results/2025-06-01.jsonl
+./extraction-parallel.sh /mnt/calldata/2025-06-01 /mnt/results/2025-06-01.jsonl
 ```
 
 > **Note:** The script **appends** to the output file. If the output file already exists, new rows will be added to the end. Clear or remove the file beforehand if a clean run is needed.
